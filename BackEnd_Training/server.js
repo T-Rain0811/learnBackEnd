@@ -1,14 +1,30 @@
-const { createServer } = require('node:http');
+const express = require('express')   // commonjs module syntax
+const path = require('path')        // module path
+require('dotenv').config()         // load environment variables from .env file
 
-const hostname = '127.0.0.1'; // local host
-const port = 6969;
+const app = express()                          // app express
+const port = process.env.PORT || 8888         // port number
+const hostname = process.env.HOST_NAME       // hostname
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\nHello from Node.js server!\n');
-});
+//configure view template engine
+app.set('views', path.join(__dirname, '../src/views'))  // set views directory
+app.set('view engine', 'ejs')                          // set view engine to ejs
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+// route handler
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.get('/abc', (req, res) => {
+  res.send('Check ABC route & nodemon')
+})
+
+app.get('/test', (req, res) => {
+  //res.send('<h1>Test route</h1><p>This is a test route</p>')
+  res.render('sample.ejs')
+})
+
+// start the server
+app.listen(port, hostname, () => {
+  console.log(`Example app listening on port ${port}`)
+})
