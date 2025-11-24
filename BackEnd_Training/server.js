@@ -10,13 +10,12 @@ const hostname = process.env.HOST_NAME       // hostname
 app.set('views', path.join(__dirname, '../src/views'))  // set views directory
 app.set('view engine', 'ejs')                          // set view engine to ejs
 
+//config static files
+app.use(express.static(path.join(__dirname,'../src/public')))
+
 // route handler
 app.get('/', (req, res) => {
   res.send('Hello World!')
-})
-
-app.get('/abc', (req, res) => {
-  res.send('Check ABC route & nodemon')
 })
 
 app.get('/test', (req, res) => {
@@ -26,5 +25,5 @@ app.get('/test', (req, res) => {
 
 // start the server
 app.listen(port, hostname, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port http://${hostname}:${port}`)
 })
