@@ -19,12 +19,14 @@
 
     <div>
         <div class="title">List Users</div>
+        <%= JSON.stringify(users) %>
         <table class="styled-table">
             <thead>
                 <tr>
                     <th>Email</th>
                     <th>Name</th>
                     <th>City</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,6 +34,10 @@
                     <td>abc@gamil.com</td>
                     <td>Quang</td>
                     <td>Hai Phong</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
                 </tr>
                 <tr class="active-row">
                     <td>quoctoanahihi.123@gmail.com</td>
