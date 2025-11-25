@@ -3,8 +3,8 @@
   padding: 0;
 }
 
-h2, p {
-  margin: 10px;
+h2{
+  margin: 20px;
 }
 
 ul {
@@ -28,4 +28,31 @@ ul li a:hover:not(.active) {
 
 ul li a.active {
   background-color: #04AA6D;
+}
+
+.form{
+  width: 500px;
+  margin: 20px 20px;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 10px;
 }

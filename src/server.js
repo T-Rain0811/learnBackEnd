@@ -7,11 +7,15 @@ const app = express()                          // app express
 const port = process.env.PORT || 8888         // port number
 const hostname = process.env.HOST_NAME       // hostname
 
+//config req.body
+app.use(express.json()); // Used to parse JSON bodies
+app.use(express.urlencoded()); //Parse URL-encoded bodies
+
 //configure view template engine
 configViewEngine(app);
 
 //setup routes
-app.use('/v1', webRoutes);
+app.use('/', webRoutes);
 
 // start the server
 app.listen(port, hostname, () => {

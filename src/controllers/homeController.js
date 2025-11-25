@@ -20,7 +20,26 @@ const getTestPage = (req,res) => {
     res.render('sample')
 }
 
+const postAddUser = (req,res) => {
+
+    console.log(">>>check req.body: ",req.body)
+    // let email = req.body.email;
+    // let name = req.body.name;
+    // let city = req.body.city;
+    let {email, name, city} = req.body;
+
+    connection.query(
+        `INSERT INTO Users (email, name, city) VALUES (?,?,?)`,[email, name, city],
+        (err, results, fields) => {
+                console.log(results);
+                res.send('User added successfully!');
+        }
+    );
+    
+}
+
 module.exports = {
     getHomePage,
-    getTestPage
+    getTestPage,
+    postAddUser
 }
