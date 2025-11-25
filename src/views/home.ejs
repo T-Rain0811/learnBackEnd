@@ -6,35 +6,42 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
+    <div>
+        <ul class="topnavi">
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/create">Create Users</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
 
     <h2>Welcome to Home Page</h2>
 
-    <div class = "form">
-        <form action="/add-user" method="POST">
-            <fieldset>
-                <legend>Form add new user</legend>
-                <div class="input-group">
-                    <label>Email: </label>
-                    <input type="text" id="emailID" name="email"/>
-                </div>
-                <div class="input-group">
-                    <label>Name: </label>
-                    <input type="text" id="nameID" name="name"/>
-                </div>
-                <div class="input-group">
-                    <label>City: </label>
-                    <input type="text" id="cityID" name="city"/>
-                </div>
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
+    <div>
+        <div class="title">List Users</div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>abc@gamil.com</td>
+                    <td>Quang</td>
+                    <td>Hai Phong</td>
+                </tr>
+                <tr class="active-row">
+                    <td>quoctoanahihi.123@gmail.com</td>
+                    <td>Toan</td>
+                    <td>Nam Dinh</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>                    
     </div>
-    
+
 </body>
 </html>

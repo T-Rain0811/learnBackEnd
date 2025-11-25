@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-
+/*======== nav bar ==========*/
 h2{
   margin: 20px;
 }
@@ -29,30 +29,50 @@ ul li a:hover:not(.active) {
 ul li a.active {
   background-color: #04AA6D;
 }
+/*========end nav bar ==========*/
 
-.form{
-  width: 500px;
-  margin: 20px 20px;
+
+/*======== form list user ==========*/
+.title{
+  margin: 20px 20px 0px 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-fieldset {
-  background-color: #eeeeee;
-  display: block;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding-top: 0.35em;
-  padding-bottom: 0.625em;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-  border: 2px groove (internal value);
+.styled-table {
+    border-collapse: collapse;
+    margin: 5px 20px 20px 20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-legend {
-  background-color: gray;
-  color: white;
-  padding: 5px 10px;
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
 }
 
-input {
-  margin: 10px;
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
 }
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+/*======== end form list user ==========*/

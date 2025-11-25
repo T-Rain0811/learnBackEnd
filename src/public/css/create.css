@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*======== nav bar ==========*/
+
+h2{
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #111111;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+/*======== end nav bar ==========*/
+
+
+/*======== form add user ==========*/
+.form{
+  width: 500px;
+  margin: 20px 20px;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px groove (internal value);
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 10px;
+}
+/*======== end form add user ==========*/
