@@ -1,7 +1,7 @@
 
 const getHomePage = (req, res) => {
-  //xuly data... 
-  res.send('Hello World!')
+    //xuly data... 
+    res.send('Hello World!')
 }
 
 const getTestPage = (req,res) => {
@@ -9,6 +9,6 @@ const getTestPage = (req,res) => {
 }
 
 module.exports = {
-  getHomePage,
-  getTestPage
+    getHomePage,
+    getTestPage
 }
