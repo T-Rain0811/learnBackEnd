@@ -8,10 +8,12 @@ const getHomePage = (req, res) => {
         'SELECT * from Users u',
         function (err, results, fields) {
             users = results;
-            res.send(JSON.stringify(users));
+            // res.send(JSON.stringify(users));
         }
     );
     
+    //render home page
+    return res.render('home')
 }
 
 const getTestPage = (req,res) => {
