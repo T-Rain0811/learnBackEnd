@@ -1,8 +1,7 @@
 require('dotenv').config()                                 // load environment variables from .env file
 const express = require('express')                        // commonjs module syntax
-const path = require('path')                             // module path
-const configViewEngine = require('./config/viewEngine') // import view engine configuration
-const webRoutes = require('./routes/web') // import web routes
+const configViewEngine = require('./config/viewEngine')  // import view engine configuration
+const webRoutes = require('./routes/web')               // import web routes
 
 const app = express()                          // app express
 const port = process.env.PORT || 8888         // port number
